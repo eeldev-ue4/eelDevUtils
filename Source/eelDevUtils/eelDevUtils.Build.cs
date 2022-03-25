@@ -11,7 +11,9 @@ public class eelDevUtils : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[]
 		{
 			"Core",
+			"CoreUObject",
 			"Engine",
+			"ApplicationCore"
 		});
 		
 		PrivateDependencyModuleNames.AddRange(new string[]
@@ -27,7 +29,7 @@ public class eelDevUtils : ModuleRules
 		
 		if (Target.Platform == UnrealTargetPlatform.Mac)
 		{
-			PublicFrameworks.AddRange(new string[] { "AVFoundation", "CoreVideo", "CoreMedia" });
+			PublicFrameworks.AddRange(new string[] { "AVFoundation", "CoreVideo", "CoreMedia", "QuartzCore" });
 		}
 	}
 }

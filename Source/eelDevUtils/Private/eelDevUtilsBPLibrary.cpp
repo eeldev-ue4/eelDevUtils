@@ -11,10 +11,8 @@ UeelDevUtilsBPLibrary::UeelDevUtilsBPLibrary(const FObjectInitializer& ObjectIni
 
 bool UeelDevUtilsBPLibrary::RequestMacMicrophonePermissions()
 {
-#if PLATFORM_MAC
-#import <AVFoundation/AVFoundation.h>
-#endif
-	#if PLATFORM_MAC
+
+	#if PLATFORM_APPLE
 	switch ([AVCaptureDevice authorizationStatusForMediaType : AVMediaTypeAudio])
 	{
 	case AVAuthorizationStatusAuthorized: { break; }
